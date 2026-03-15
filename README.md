@@ -38,7 +38,8 @@ Currently seeking internship opportunities in data science, machine learning, or
 |---|---|
 | **Machine Learning** | Scikit-learn, LightGBM, PyTorch, Feature Engineering, Model Evaluation |
 | **Deep Learning** | CNNs, YOLOv8, ResNet-18, Transfer Learning, Pose Estimation |
-| **NLP** | Transformers, GPT-3.5, Mistral-7B, Prompt Compression, Summarization |
+| **NLP** | Transformers, GPT-3.5, Mistral-7B, Prompt Compression, Summarization, NER, OCR |
+| **Document Intelligence** | EasyOCR, pdfplumber, spaCy, LayoutLM, Table Extraction, Structured JSON |
 | **Analytics & BI** | Power BI, Excel, SQL, KPI Design, Funnel Analysis, Dashboard Automation |
 | **Data Engineering** | ETL Pipelines, API Integration, Data Cleaning, Pandas, NumPy |
 | **Simulation** | Stochastic Modeling, SciPy, NetworkX, Discrete Event Simulation |
@@ -46,6 +47,18 @@ Currently seeking internship opportunities in data science, machine learning, or
 ---
 
 ## Selected Projects
+
+### Document Intelligence — PDF & Image Data Extraction
+
+End-to-end document understanding pipeline that ingests born-digital and scanned PDFs or images and outputs clean, structured JSON. Uses a hybrid extraction strategy: direct text parsing for native PDFs, EasyOCR for scanned pages, pdfplumber for table detection, and spaCy with custom regex patterns for Named Entity Recognition. Includes a Streamlit interface with multi-language OCR support, per-entity-type filtering, and one-click JSON export.
+
+Directly motivated by RA work on automated patent analysis: the system extracts patent numbers (US/EP/WO/JP formats), IPC/CPC classification codes, claim references, inventors, assignees, and filing dates from patent documents.
+
+**Entities extracted:** PERSON · ORG · DATE · LAW · PATENT\_NUM · IPC\_CODE · CLAIM\_NUM · INVENTOR · ASSIGNEE
+
+`Python` `EasyOCR` `pdfplumber` `spaCy` `Streamlit` `Pandas` `Pillow` `NER` `OCR`
+
+---
 
 ### Salience-Guided Prompt Compression for Summarization
 Extended the SigExt framework for LLM-based abstractive summarization across single and multi-document settings. Evaluated GPT-3.5-Turbo and Mistral-7B under varying compression configurations on CNN/DailyMail and Multi-News datasets.
