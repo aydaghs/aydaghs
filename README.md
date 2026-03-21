@@ -47,12 +47,6 @@ Currently seeking internship opportunities in data science, machine learning, or
 
 ## Selected Projects
 
-### [Document Intelligence App](https://github.com/aydaghs/document-intelligence-app)
-Full-stack application that extracts structured data (tables, named entities, relationships) from PDFs and scanned images. Built a robust pipeline combining Tesseract/EasyOCR for text extraction, spaCy with custom domain patterns for NER, and dependency parsing for relationship extraction. 
-
-**Result:** End-to-end data extraction and normalization into JSON and SQLite, served through a premium Streamlit interface.
-
-`Python` `OCR` `spaCy` `NLP` `Streamlit` `Computer Vision`
 
 ---
 
