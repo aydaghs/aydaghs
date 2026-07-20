@@ -28,8 +28,6 @@ I'm a Data Science & Engineering graduate student at Politecnico di Torino, with
 
 I bring hands-on experience in Python, SQL, Power BI, and PyTorch, applied across academic projects and professional roles in e-commerce analytics and IT operations. My academic focus includes deep learning, NLP, statistical modeling, and data engineering.
 
-Currently seeking internship opportunities in data science, machine learning, or analytics roles within international environments.
-
 ---
 
 ## Technical Focus
