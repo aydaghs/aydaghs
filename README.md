@@ -2,7 +2,7 @@
 
 <p align="center">
   MSc Data Science & Engineering · Politecnico di Torino<br>
-  <sub>Bridging machine learning research and data-driven business intelligence</sub>
+  <sub>AI agents, automation and machine learning that people use in their daily work</sub>
 </p>
 
 <p align="center">
@@ -12,94 +12,64 @@
   <a href="mailto:ghasemazar.ayda@gmail.com">
     <img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white"/>
   </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Turin,%20Italy-555555?style=flat-square&logo=googlemaps&logoColor=white"/>
-  </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Open%20to%20Internships-2EA44F?style=flat-square"/>
-  </a>
+  <img src="https://img.shields.io/badge/Turin,%20Italy-555555?style=flat-square&logo=googlemaps&logoColor=white"/>
 </p>
 
 ---
 
-## Profile
+## About
 
-I'm a Data Science & Engineering graduate student at Politecnico di Torino, with a B.Sc. in Computer Science. My work spans two complementary domains: building and evaluating machine learning models for predictive and analytical tasks, and transforming complex datasets into structured business intelligence through dashboards and KPI frameworks.
+I'm a Data Science & Engineering master's student at Politecnico di Torino with a B.Sc. in Computer Science. I like finding the repetitive part of a process and building a working tool for it: an agent, a pipeline or a small interface, with checks so people can trust what it produces.
 
-I bring hands-on experience in Python, SQL, Power BI, and PyTorch, applied across academic projects and professional roles in e-commerce analytics and IT operations. My academic focus includes deep learning, NLP, statistical modeling, and data engineering.
-
----
-
-## Technical Focus
-
-| Domain | Tools & Methods |
-|---|---|
-| **Machine Learning** | Scikit-learn, LightGBM, PyTorch, Feature Engineering, Model Evaluation |
-| **Deep Learning** | CNNs, YOLOv8, ResNet-18, Transfer Learning, Pose Estimation |
-| **NLP** | Transformers, GPT-3.5, Mistral-7B, Prompt Compression, Summarization |
-| **Analytics & BI** | Power BI, Excel, SQL, KPI Design, Funnel Analysis, Dashboard Automation |
-| **Data Engineering** | ETL Pipelines, API Integration, Data Cleaning, Pandas, NumPy |
-| **Simulation** | Stochastic Modeling, SciPy, NetworkX, Discrete Event Simulation |
+Recent work: AI Engineer Intern at BoostEd AI (Jul–Nov 2026), Research Assistant at DIGEP, Politecnico di Torino (Mar–Jul 2026).
 
 ---
 
-## Selected Projects
+## AI agents and automation
 
+### Daily job-search agent on a cloud server · [job-scout](https://github.com/aydaghs/job-scout)
+**Problem:** checking several job boards every day by hand, and seeing the same adverts again and again.
+**Tools:** Python, Gemini API, SQLite, Telegram Bot API, Linux (systemd timers), Oracle Cloud.
+**How it works:** every day it fetches postings from job boards, removes duplicates, asks an LLM to score each posting against a YAML profile of my skills and gaps, and sends the good matches to a Telegram bot.
+**My part:** built on an open-source project; I deployed and run three scouts (jobs, internships, thesis) on a free cloud VM with daily timers, wrote and tuned the profiles, and fixed repeated alerts for listings that have no company name (the board gives them a new link every day).
 
----
+### Multi-agent compliance analysis · NTT Data × BEST Torino Hackathon, Top 10 Finalist
+**Problem:** a compliance analysis that was done by hand.
+**Tools:** Python, LLM APIs, multi-agent design.
+**How it works:** four agents split the analysis between them and pass their results on to produce the final report. Built in under 48 hours; I led the architecture and presented the working prototype.
 
-### Salience-Guided Prompt Compression for Summarization
-Extended the SigExt framework for LLM-based abstractive summarization across single and multi-document settings. Evaluated GPT-3.5-Turbo and Mistral-7B under varying compression configurations on CNN/DailyMail and Multi-News datasets.
+### LLM Planner agent with a validation layer · BoostEd AI internship
+**Problem:** AI-generated learning chapters needed quizzes, flashcards and exercises in the right places, and model output could not be used without checks.
+**Tools:** LLMs, TypeScript, Zod, React, Docker.
+**How it works:** a Planner agent decides where each interactive element goes; every model output is validated against a schema before use, and a human-in-the-loop React screen lets experts approve or correct results. *(Company code, not public.)*
 
-**Result:** Up to 79% token reduction while maintaining ROUGE and BERTScore quality metrics.
+### Screen-recording tutorials to interactive web pages · BoostEd AI internship
+**Problem:** turning video tutorials into step-by-step interactive pages by hand is slow.
+**Tools:** Python, OpenCV, NumPy, Tesseract OCR, Gemini, Playwright.
+**How it works:** frame-change detection and pointer tracking find each step, OCR reads the screen, Gemini generates the page, and Playwright tests check the result automatically. *(Company code, not public.)*
 
-`Python` `GPT-3.5-Turbo` `Mistral-7B` `Transformers` `NLP` `IEEE Paper`
-
----
-
-### Apartment Rent Price Prediction
-End-to-end regression pipeline built on 100,000+ U.S. rental listings. Integrated text features via TF-IDF, location encoding via target encoding, and temporal variables. Results communicated through interactive Power BI dashboards.
-
-**Result:** LightGBM regressor with early stopping; location and square footage identified as dominant price drivers.
-
-`Python` `LightGBM` `Scikit-learn` `Pandas` `Power BI` `Feature Engineering`
-
----
-
-### 6D Object Pose Estimation with Deep Learning
-End-to-end pipeline combining object detection with deep learning-based pose regression for 3D localization from RGB-D images. Implemented RGB-only and RGB-D fusion architectures on the LineMOD dataset.
-
-**Result:** 99.2% mAP50 on detection · 17% reduction in ADD error via RGB-D fusion over RGB-only baseline.
-
-`PyTorch` `YOLOv8` `ResNet-18` `OpenCV` `RGB-D` `Computer Vision`
+### Document Intelligence app · [document-intelligence-app](https://github.com/aydaghs/document-intelligence-app)
+**Problem:** getting structured data out of PDFs and scanned documents.
+**Tools:** Python, Streamlit, Tesseract and EasyOCR, spaCy, OpenCV, SQLite.
+**How it works:** OCR with a native-text fallback, table extraction, named-entity and relationship extraction, then export to clean JSON or a SQLite database, from a simple web interface.
 
 ---
 
-### Age Prediction from Audio Features
-Regression pipeline for speaker age estimation using vocal and temporal features extracted from the Free Spoken Digit Dataset. Compared Random Forest and SVM approaches with full feature analysis.
+## Machine learning projects
 
-**Result:** Validation RMSE of 5.12 years · Random Forest outperformed SVM baseline.
-
-`Python` `Scikit-learn` `Librosa` `Random Forest` `Signal Processing`
-
----
-
-### Discrete Event Simulation — Stochastic Modeling Series
-A sequence of simulation projects covering probabilistic and network-based models: M/G/1 queueing systems, airport departure lounge DES, predator-prey Markov chains, multi-type Galton-Watson branching processes, multi-group SIR epidemic modeling, and random graphs with majority dynamics.
-
-`Python` `NumPy` `SciPy` `Matplotlib` `NetworkX` `Stochastic Processes`
+| Project | What it does | Tools |
+|---|---|---|
+| [Prompt compression for summarization](https://github.com/aydaghs/nlp-prompt-compression) *(team)* | 100+ experiments: up to 79% fewer input tokens while tracking ROUGE and BERTScore | Python, Mistral-7B, Transformers |
+| [6D object pose estimation](https://github.com/aydaghs/6d-pose-estimation) *(team)* | Detection plus 3D pose from RGB-D images; my RGB-D model cut pose error by 16% | PyTorch, YOLOv8, ResNet-18, OpenCV |
+| [Apartment rent price prediction](https://github.com/aydaghs/Apartment-Rent-Price-Prediction) *(team)* | Regression on 100K+ rental listings, explained with SHAP | Python, LightGBM, Scikit-learn |
+| [PageRank from scratch](https://github.com/aydaghs/pagerank-from-scratch) | Sparse power iteration on a 6,012-page web graph, validated against published results | Python, NumPy |
+| [Discrete event simulation](https://github.com/aydaghs/discrete-event-simulation) | Queueing, epidemic and random-graph simulations with confidence intervals | Python, SciPy, NetworkX |
 
 ---
 
-## GitHub Stats
+## Skills
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=aydaghs&show_icons=true&theme=default&hide_border=true&title_color=0A66C2&icon_color=0A66C2" width="48%"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aydaghs&layout=compact&theme=default&hide_border=true&title_color=0A66C2" width="40%"/>
-</p>
-
----
-
-<p align="center">
-  <sub>ghasemazar.ayda@gmail.com · Turin, Italy · linkedin.com/in/ayda-ghasemazar</sub>
-</p>
+**Agents and LLMs:** LLM APIs (Gemini), prompting, multi-agent systems, RAG, LangChain, output validation (Zod)
+**Building tools:** Python, TypeScript, React, REST APIs and JSON, Docker, Git, Playwright, Linux
+**Data and ML:** Pandas, NumPy, SQL, PyTorch, Scikit-learn, OpenCV, OCR
+**Languages:** English (IELTS 7.0), Persian and Azerbaijani (native), Italian (A2)
